@@ -1,0 +1,104 @@
+<div style="height: 60px; width: 100%; background-color: #a9e5ea;">
+    <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
+    <p style="position: absolute;color: #294666;margin-left: 43px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
+            2</strong></p>
+    <p style="position: absolute;color: #294666;margin-left: 112px;margin-top: 20px;font-size: 11px;width: 340px;">
+        O PROCESSO DE TRABALHO E SAÚDE-DOENÇA DOS TRABALHADORES DA APS</p>
+</div>
+<div class="coluna-esquerda largura-1_2">
+    <div style="margin-left: 44px;margin-top: 52px;width: 384px;">
+        <p>Quando consideramos os transtornos ansiosos, é possível identificar na Lista de
+            Doenças Relacionadas ao Trabalho os
+            agentes ou os fatores de risco do trabalho relacionados ao seu surgimento (BRASIL, 2020).
+        </p>
+        <p style="margin-top: 18px;text-align: center;">Clique nas imagens para conhecê-los:</p>
+        <div style="display: flex; margin-left: 40px;">
+            <div id="botao_1">
+                <img class="animate__animated animate__backInLeft" src="recursos/imgs/Tela-70a-hover.svg"
+                    style="left: 84px;width: 140px;position: absolute;">
+                <img class="animate__animated animate__backInLeft" src="recursos/imgs/Tela-70b.svg"
+                    style="width: 140px;">
+            </div>
+            <div id="botao_2">
+                <img class="animate__animated animate__backInLeft" src="recursos/imgs/Tela-70b-hover.svg"
+                    style="left: 224px;width: 140px;position: absolute;">
+                <img class="animate__animated animate__backInLeft" src="recursos/imgs/Tela-70a.svg"
+                    style="width: 140px;">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="coluna-direita largura-1_2" style="margin-top: 21px;width: 384px;margin-right: 32px;">
+    <p>Diante disso tudo, a realidade apresentada pelo relatório condiz com a unidade que você gerencia? </p>
+    <p>Se não, já pensou em
+        fazer um levantamento do perfil de adoecimento de seus trabalhadores?</p>
+    <p>Esse levantamento é fundamental para você
+        compreender a condição de saúde e doença dos seus trabalhadores e prospectar ações de prevenção e promoção
+        da saúde.</p>
+    <div class="animate__animated animate__backInRight"
+        style="display: flex;width: 348px;height: 151px;position: absolute;top: 272px;right: 32px;background-color: #fff2d9;padding-left: 40px;padding-top: 10px;border-radius: 10px;">
+        <img src="recursos/imgs/lampada.png" style="width: 48px;height: 45px;margin-left: -21px;margin-top: 50px;">
+        <p style="position: absolute;top: 5px;left: 100px;font-weight: bold;color: #294666;font-size: 15px;">PARA
+            REFLETIR</p>
+        <div style="margin-left: 23px;margin-top: 26px;width: 341px;">
+            <p style="width: 260px;">Após esse estudo, sugerimos uma reflexão: quais intervenções podem ser realizadas
+                com os
+                trabalhadores a fim de prevenir
+                o adoecimento e promover a saúde?</p>
+        </div>
+    </div>
+</div>
+<footer style="height: 19px;/* width: 100%; */background-color: #cce3f1;">
+    <p style="position: absolute;color: #294666;margin-left: 41px;top: 2px;font-size: 11px;">SAÚDE DO TRABALHADOR E
+        O PAPEL DOS GERENTES DA APS</p>
+</footer>
+<div id="janela_1"
+    style="position: absolute; width: 808px; height: 122px; top: 273px; left: 40px; background-color: rgb(40, 70, 102); cursor: pointer;">
+    <div style="display: flex;">
+        <img src="recursos/imgs/Tela-70a-hover.svg" style="width: 111px;">
+        <div style="margin-left: 6px;width: 672px;">
+            <p style="font-size: 14px;color: white;font-weight: bolder;">Fatores psicossociais relacionados a:</p>
+            <p style="color: white;">gestão organizacional; contexto da organização do
+                trabalho; característica das relações sociais no trabalho; conteúdo
+                das tarefas do trabalho; condição do ambiente de trabalho; interação pessoa-tarefa; jornada de trabalho;
+                violência e
+                assédio moral ou sexual no trabalho; discriminação no trabalho; e risco de morte e trauma no trabalho.
+            </p>
+        </div>
+    </div>
+</div>
+<div id="janela_2"
+    style="position: absolute; width: 808px; height: 122px; top: 273px; left: 40px; background-color: rgb(40, 70, 102); cursor: pointer;">
+    <div style="display: flex;">
+        <img src="recursos/imgs/Tela-70b-hover.svg" style="width: 111px;">
+        <div style="margin-top: 25px;margin-left: 6px;width: 672px;">
+            <p style="font-size: 20px;color: white;font-weight: bolder;">Desemprego.
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
