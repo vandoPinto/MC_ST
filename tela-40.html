@@ -13,10 +13,30 @@
         <p>Clique nos verbos a seguir para saber suas ações.</p>
     </div>
     <div>
-        <p id="botao_1" style="margin-left: 41px;font-size: 27px;font-weight: bold;color: #2F5579;">PLANEJAR</p>
-        <p id="botao_2" style="margin-left: 110px;font-size: 27px;font-weight: bold;color: #2F5579;">IMPLEMENTAR</p>
-        <p id="botao_3" style="margin-left: 61px;font-size: 27px;font-weight: bold;color: #2F5579;">VIGIAR</p>
-        <p id="botao_4" style="margin-left: 105px;font-size: 27px;font-weight: bold;color: #2F5579;">ACOMPANHAR</p>
+        <div id="botao_1" style="cursor: pointer;">
+            <p id="bt_1_3" style="margin-left: 41px;font-size: 27px;font-weight: bold;color: #2F5579;">PLANEJAR</p>
+            <div id="btn_1_2">
+                <p style="margin-left: 41px;font-size: 27px;font-weight: bold;color: #F7A613;">PLANEJAR</p>
+            </div>
+        </div>
+        <div id="botao_2" style="cursor: pointer;">
+            <p id="bt_2_3" style="margin-left: 110px;font-size: 27px;font-weight: bold;color: #2F5579;">IMPLEMENTAR</p>
+            <div id="btn_2_2">
+                <p style="margin-left: 110px;font-size: 27px;font-weight: bold;color: #F7A613;">IMPLEMENTAR</p>
+            </div>
+        </div>
+        <div id="botao_3" style="cursor: pointer;">
+            <p id="bt_3_3" style="margin-left: 61px;font-size: 27px;font-weight: bold;color: #2F5579;">VIGIAR</p>
+            <div id="btn_3_2">
+                <p style="margin-left: 61px;font-size: 27px;font-weight: bold;color: #F7A613;">VIGIAR</p>
+            </div>
+        </div>
+        <div id="botao_4" style="cursor: pointer;">
+            <p id="bt_4_3" style="margin-left: 105px;font-size: 27px;font-weight: bold;color: #2F5579;">ACOMPANHAR</p>
+            <div id="btn_4_2">
+                <p style="margin-left: 105px;font-size: 27px;font-weight: bold;color: #F7A613;">ACOMPANHAR</p>
+            </div>
+        </div>
     </div>
     <img class="animate__animated animate__backInRight" style="width: 512px;position: absolute;right: 49px;top: 161px;"
         src="recursos/imgs/Tela40.svg">
@@ -29,13 +49,15 @@
     style="position: absolute;width: 392px;height: 392px;top: 60px;left: 410px;background: 0% 0% no-repeat padding-box padding-box rgb(41, 70, 102);cursor: pointer;border-radius: 50%;">
     <p style="color: white;font-size: 24px;font-weight: bolder;margin-top: 111px;margin-left: 134px;">PLANEJAR</p>
     <p style="color: white;width: 313px;font-size: 14px;margin-left: 40px;text-align: center;margin-top: 9px;">
-        associando as evidências levantadas pelas diversas aproximações ao processo de trabalho e articulando o vigiar
+        associando as evidências levantadas pelas diversas aproximações ao processo de trabalho e articulando o
+        vigiar
         para a elaboração de um plano de ação, que deve ser contínuo e constantemente renovado.
     </p>
 </div>
 <div id="janela_2"
     style="position: absolute;width: 392px;height: 392px;top: 60px;left: 410px;background-color: #2F6A79;cursor: pointer;border-radius: 50%;">
-    <p style="color: white;font-size: 24px;font-weight: bolder;margin-top: 111px;margin-left: 114px;">IMPLEMENTAR</p>
+    <p style="color: white;font-size: 24px;font-weight: bolder;margin-top: 111px;margin-left: 114px;">IMPLEMENTAR
+    </p>
     <p style="color: white;width: 313px;font-size: 14px;margin-left: 40px;text-align: center;margin-top: 9px;">
         atuando por meio das intervenções nos processos e na organização do trabalho, articulando o intervir com o
         vigiar e com
@@ -48,7 +70,8 @@
     style="position: absolute; width: 392px; height: 392px; top: 60px; left: 410px; background-color: rgb(99, 47, 121); cursor: pointer; border-radius: 50%;">
     <p style="color: white;font-size: 24px;font-weight: bolder;margin-top: 111px;margin-left: 154px;">VIGIAR</p>
     <p style="color: white;width: 313px;font-size: 14px;margin-left: 40px;text-align: center;margin-top: 9px;">
-        por meio do levantamento constante de informações, seja na fase de preparação, análise de processos, aplicação
+        por meio do levantamento constante de informações, seja na fase de preparação, análise de processos,
+        aplicação
         de
         inquéritos, mapeamento de riscos, estudos epidemiológicos ou acompanhamento do processo.
     </p>
@@ -57,7 +80,8 @@
     style="position: absolute; width: 392px; height: 392px; top: 60px; left: 410px; background-color: rgb(121, 57, 47); cursor: pointer; border-radius: 50%;">
     <p style="color: white;font-size: 24px;font-weight: bolder;margin-top: 111px;margin-left: 110px;">ACOMPANHAR</p>
     <p style="color: white;width: 313px;font-size: 14px;margin-left: 40px;text-align: center;margin-top: 9px;">
-        continuamente, com o intuito de estabelecer novas pactuações, reorganizar os processos de trabalho e buscar a
+        continuamente, com o intuito de estabelecer novas pactuações, reorganizar os processos de trabalho e buscar
+        a
         compreensão dos efeitos produzidos na implementação das estratégias de prevenção e promoção de saúde.
     </p>
 </div>
@@ -70,9 +94,11 @@
             $(botao).css('cursor', 'pointer');
             $(botao).hover(() => {
                 $(document).find(`[id=btn_${index + 1}_2]`).show();
+                $(document).find(`[id=bt_${index + 1}_3]`).hide();
             });
             $(botao).mouseleave(() => {
                 $(document).find('[id^=btn]').hide();
+                $(document).find(`[id=bt_${index + 1}_3]`).show();
             });
             $(botao).click(() => {
                 apagarJanelas();
