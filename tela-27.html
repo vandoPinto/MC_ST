@@ -18,12 +18,18 @@
     <div style="margin-left: 40px;margin-top: 177px;width: 436px;">
         <p style="font-size: 14px;">O Manual de Saúde e Segurança do Trabalho do Servidor do
             Distrito Federal traz informações importantes, com destaque
-            para o Programa de Prevenção aos Riscos Ambientais (PPRA), a Comissão de Segurança do Trabalho (CST), os
+            para o <strong style="width: 40px; background-color: #FAC900; display: inline;"><a id="hotWord-bt">Programa
+                    de Prevenção aos Riscos Ambientais (PPRA)</a></strong>, a <strong
+                style="width: 40px; background-color: #FAC900; display: inline;"><a id="hotWord-bt2">Comissão de
+                    Segurança do Trabalho (CST)</a></strong>,
+            os
             equipamentos de
             proteção individual (EPI), os equipamentos de proteção coletiva (EPC), o protocolo de investigação de
             acidente
             em
-            serviço, o programa de controle médico e saúde ocupacional (PCMSO), as diretrizes de saúde mental
+            serviço, o <strong style="width: 40px; background-color: #FAC900; display: inline;"><a
+                    id="hotWord-bt3">programa de controle médico e saúde ocupacional (PCMSO)</a></strong>, as diretrizes
+            de saúde mental
             preventiva, o
             programa
             de prevenção de riscos psicossociais, o programa de avaliação psicológica e o programa de prevenção do
@@ -31,3 +37,51 @@
             moral.</p>
     </div>
 </div>
+<div id="conteudo"
+    style="position: absolute;background-color: #fac901;top: 76px;left: 402px;width: 440px;border-radius: 10px;">
+    <p style="text-align: center;">Parte integrante do conjunto mais amplo das iniciativas do órgão no campo de
+        preservação da saúde e da integridade
+        física dos servidores, por meio da antecipação, do reconhecimento, da avaliação e do controle de possíveis
+        riscos
+        ambientais existentes ou que venham a existir nos ambientes de trabalho.</p>
+</div>
+<div id="conteudo2"
+    style="position: absolute;background-color: #fac901;top: 266px;left: 398px;width: 470px;border-radius: 10px;">
+    <p style="text-align: center;">Auxilia o Setor de Gestão de Pessoas dos órgãos na prevenção de acidentes e doenças
+        decorrentes do trabalho, aplicando,
+        promovendo e acompanhando as medidas de proteção indicadas pelas equipes multiprofissionais de saúde e segurança
+        do
+        trabalho, lotados nas secretarias e nos órgãos vinculados.</p>
+</div>
+<div id="conteudo3"
+    style="position: absolute;background-color: #fac901;top: 336px;left: 398px;width: 470px;border-radius: 10px;">
+    <p style="text-align: center;">Estabelece e normatiza parâmetros para a promoção e a preservação da saúde do
+        conjunto de servidores, com base nos
+        riscos à saúde e, em especial, os identificados nas avaliações previstas nas normas de saúde e segurança do
+        trabalho.</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        let conteudo2 = $('#conteudo2').hide();
+        let conteudo3 = $('#conteudo3').hide();
+        $('#hotWord-bt').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').css('cursor', 'pointer').mouseout(() => {
+            conteudo.fadeOut()
+        })
+        $('#hotWord-bt2').hover(() => {
+            conteudo2.fadeIn()
+        })
+        $('#hotWord-bt2').css('cursor', 'pointer').mouseout(() => {
+            conteudo2.fadeOut()
+        })
+        $('#hotWord-bt3').hover(() => {
+            conteudo3.fadeIn()
+        })
+        $('#hotWord-bt3').css('cursor', 'pointer').mouseout(() => {
+            conteudo3.fadeOut()
+        })
+    })
+</script>

@@ -8,7 +8,9 @@
             tomada de
             decisões.</p>
         <p style="color: white;width: 298px;line-height: 1.4;">A partir de 1919, com a
-            criação da Organização Internacional do Trabalho (OIT), são observadas mudanças a
+            criação da Organização Internacional do Trabalho <strong
+                style="width: 40px; background-color: #FAC900; display: inline;"><a id="hotWord-bt">(OIT)</a></strong>,
+            são observadas mudanças a
             favor do surgimento de normas e práticas de proteção à saúde do trabalhador (SANTOS, 2012).</p>
         <div style="position: absolute;height: 300px;width: 5px;background-color: #FFA800;top: 98px;left: 378px;">
         </div>
@@ -34,3 +36,19 @@
             engrenagem de uma máquina.</p>
     </div>
 </div>
+<div id="conteudo"
+    style="position: absolute;background-color: #fac901;top: 225px;left: 22px;width: 357px;border-radius: 10px;">
+    <p style="text-align: center;">A OIT é uma agência multilateral ligada à Organização das Nações Unidas (ONU) e
+        especializada nas questões do trabalho.</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').css('cursor', 'pointer').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>
