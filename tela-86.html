@@ -6,39 +6,45 @@
         O PAPEL DO GESTOR DA APS PARA APLICAÇÃO DE ESTRATÉGIAS DE PREVENÇÃO E PROMOÇÃO DA SAÚDE DE SEU TRABALHADOR
     </p>
 </div>
-<div class="coluna-esquerda " style="width: 100%;margin-left: 22px;margin-top: 40px;">
-    <div style="display: flex;">
-        <img class="animate__animated animate__backInLeft" src="recursos/imgs/Grupo_1652.svg"
-            style="width: 232px;height: 99px;">
-        <p style="width: 576px;margin-left: 18px;">Instituído na Política Integrada de Atenção à Saúde do Servidor
-            Público do Distrito Federal, é de
-            responsabilidade da
-            SubSaúde e desenvolvido por médico do trabalho, compreendendo a anamnese clínica e ocupacional e o exame
-            físico e
-            mental, entre outras atividades. Tem por finalidade (DISTRITO FEDERAL, 2012):
-        </p>
-    </div>
-    <div style="margin-top: 50px;margin-left: 88px;width: 714px;">
-        <p style="color: #284666;">a) Criar e manter uma cultura prevencionista adequada.</p>
-        <p style="color: #284666;margin-top: -7px;">b) Atuar na promoção da saúde.</p>
-        <p style="color: #284666;margin-top: -7px;">c) Atuar na prevenção dos agravos à saúde relacionados ao
-            trabalho.</p>
-        <p style="color: #284666;margin-top: -7px;">d) Atuar no rastreamento e no diagnóstico dos agravos à saúde
-            relacionados ao
-            trabalho.</p>
-        <p style="color: #284666;margin-top: -7px;">e) Estabelecer medidas de redução dos índices de acidentes em
-            serviço, doenças
-            profissionais e doenças do
-            trabalho.</p>
-        <p style="color: #284666;margin-top: -7px;">f) Cumprir a legislação no que se refere à saúde ocupacional do
-            servidor.</p>
-        <p style="color: #284666;margin-top: -7px;">g) Padronizar e normatizar ações voltadas para o controle médico
-            da saúde do
-            servidor.</p>
-    </div>
+<div class=" coluna-esquerda largura-1_1 tela-cheia centro">
+    <p style="margin-left: 171px;margin-top: 36px;width: 805px;">As atribuições da CST são:</p>
+    <img id="botao_1" class="animate__animated animate__backInRight" src="recursos/imgs/Tela84.svg"
+        style="margin-left: 171px; margin-top: 16px; width: 539px; cursor: pointer;">
 </div>
+
+<div id="janela_1"
+    style="position: absolute; width: 890px; height: 500px; top: 0px; left: 0px; background: 0% 0% no-repeat padding-box padding-box rgb(41, 70, 102); cursor: pointer; z-index: 10;">
+    <img src="recursos/imgs/Tela84.svg" style="margin: 26px;margin-top: 16px;width: 840px;">
+</div>
+
 <footer style="height: 19px;/* width: 100%; */background-color: #cce3f1;">
     <p style="position: absolute;color: #294666;margin-left: 41px;top: 2px;font-size: 11px;">SAÚDE DO TRABALHADOR E
-        O
-        PAPEL DOS GERENTES DA APS</p>
+        O PAPEL DOS GERENTES DA APS</p>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+                $(document).find(`[id=bt_${index + 1}_3]`).hide();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+                $(document).find(`[id=bt_${index + 1}_3]`).show();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
